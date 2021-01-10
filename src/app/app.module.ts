@@ -3,18 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ListagemComponent } from './pessoa/listagem/listagem.component';
-import { ItemComponent } from './pessoa/item/item.component';
+import { AcoesComponent } from './pessoa/acoes/acoes.component';
+import { FormularioComponent } from './pessoa/formulario/formulario.component';
+import { ServicoService } from './pessoa/servico.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ItemComponent,
     ListagemComponent,
+    AcoesComponent,
+    FormularioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ServicoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

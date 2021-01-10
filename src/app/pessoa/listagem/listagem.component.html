@@ -1,7 +1,19 @@
-<p>
-  Listagem de Pessoas
-</p>
+<div style="text-align: center;">
+  <h2>{{titulo}}</h2>
+</div>
 
-<app-item></app-item>
-<app-item></app-item>
-<app-item></app-item>
+<table class="table table-bordered table-striped">
+  <thead>
+    <th *ngFor="let th of ths">{{th}}</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pessoa of pessoas">
+        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.idade}}</td>
+        <td>{{pessoa.genero}}</td>
+        <td>
+          <app-acoes [id]="pessoa.id"></app-acoes>
+        </td>
+    </tr>
+  </tbody>
+</table>
