@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ServicoService } from '../servico.service';
+import { PessoaService } from '../shared/pessoa.service';
 
 @Component({
   selector: 'app-acoes',
@@ -10,13 +10,13 @@ export class AcoesComponent implements OnInit {
 
   @Input() id = 0;
 
-  constructor(private servico: ServicoService) { }
+  constructor(private servico: PessoaService) { }
 
   ngOnInit() {
   }
 
   public teste(e){
-    this.servico.editar(this.id)
+    
   }
 
 }

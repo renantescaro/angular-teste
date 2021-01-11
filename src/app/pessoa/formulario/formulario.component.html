@@ -1,3 +1,26 @@
-<p>
-  formulario works!
-</p>
+<form #formPessoa="ngForm" action="">
+  <div class="form-group" style="padding-left: 5%;">
+    <div class="row col-8">
+      <label>Nome</label>
+      <input type="text" class="form-control"
+      name="nome"
+      [(ngModel)]="pessoa.nome" #nome="ngModel">
+    </div>
+    <div class="row col-8">
+      <label>Idade</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="row col-2">
+      <label>Genero</label>
+      <select name="" id="" class="form-control">
+        <option value="m">Masculino</option>
+        <option value="f">Feminino</option>
+      </select>
+    </div>
+    <br>
+    <div class="row col-2">
+      <button type="button" (click)="cadastrar()" class="btn btn-primary">Salvar</button>
+      <a href="/" class="btn btn-danger">Cancelar</a>
+    </div>
+  </div>
+</form>

@@ -5,8 +5,9 @@ import { AppComponent } from './app.component';
 import { ListagemComponent } from './pessoa/listagem/listagem.component';
 import { AcoesComponent } from './pessoa/acoes/acoes.component';
 import { FormularioComponent } from './pessoa/formulario/formulario.component';
-import { ServicoService } from './pessoa/servico.service';
 import { AppRoutingModule } from './app-routing.module';
+import { PessoaService } from './pessoa/shared/pessoa.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,11 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
-    ServicoService
+    PessoaService
   ],
   bootstrap: [AppComponent]
 })
