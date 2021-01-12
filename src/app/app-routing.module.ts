@@ -5,15 +5,19 @@ import { ListagemComponent } from "./pessoa/listagem/listagem.component";
 
 export const routes: Routes = [
     {
-        path: '',
+        path: 'pessoa/listagem',
         component: ListagemComponent
     },
     {
-        path: 'editar',
+        path: 'pessoa/editar',
         component: FormularioComponent
     },
     {
-        path: 'salvar',
+        path: 'pessoa/salvar',
+        component: FormularioComponent
+    },
+    {
+        path: 'pessoa/nova',
         component: FormularioComponent
     },
 ];

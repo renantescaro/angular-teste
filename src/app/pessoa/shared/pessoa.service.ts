@@ -18,4 +18,23 @@ export class PessoaService {
     pessoas.push(pessoa);
     localStorage['pessoas'] = JSON.stringify(pessoas);
   }
+
+  editar(pessoaEdicao: Pessoa): void{
+    const pessoas = this.listarTodos();
+    pessoas.forEach(pessoa => {
+      if(pessoa.id = pessoaEdicao.id){
+        pessoa = pessoaEdicao;
+      }
+    })
+  }
+
+  porId(id: number): Pessoa{
+    const pessoas = this.listarTodos();
+    pessoas.forEach(pessoa => {
+      if(pessoa.id = id){
+        return pessoa;
+      }
+    })
+    return new Pessoa();
+  }
 }

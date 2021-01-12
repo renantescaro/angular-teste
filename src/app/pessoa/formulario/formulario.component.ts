@@ -22,12 +22,20 @@ export class FormularioComponent implements OnInit {
     this.pessoa = new Pessoa();
   }
 
-  cadastrar() : void{
-
-    console.log(this.pessoa);
-
-    //this.service.cadastrar(this.pessoa);
-    //this.router.navigate(['']);
+  salvar() : void{
+    if(this.formPessoa.form.valid){
+      if(this.pessoa.id === undefined){
+        this.service.cadastrar(this.pessoa);
+        this.router.navigate(['pessoa/listar']);
+        return;
+      }
+      
+      
+      
+      
+      return;
+    }
+    alert('Verificar campos obrigatórios!');
   }
 
 }
